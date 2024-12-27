@@ -1,0 +1,31 @@
+.modalImg {
+	height: 4rem;
+	width: 4rem;
+}
+
+.modalData {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 2em;
+}
+
+.cartHeadline {
+	padding-bottom: 1em;
+}
+
+.item {
+	padding: .5em 0;
+}
+
+.itemBtn {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	right: 0;
+	top: auto;
+}
+
+.decreaseBtn, .increaseBtn {
+	cursor: pointer;
+}

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>product cart</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+	<body class="bg-projectRose50 relative">
+		<div
+			class="modal hidden md:hidden absolute w-full h-full bg-black/45 z-10 transition-colors">
+			<div
+				class="modalBox absolute bg-white rounded-t-xl p-6 w-full bottom-0 md:mt-12 md:bottom-auto md:top-0 md:left-1/2 md:transform md:-translate-x-1/2 md:w-auto md:p-12 md:rounded-3xl transition-transform overflow-y-auto max-h-full">
+				<img src="./images/icon-order-confirmed.svg" alt="" class="py-2" />
+				<p class="text-5xl font-bold py-2">Order Confirmed</p>
+				<p class="text-projectRose500 font-light">
+					We hope you enjoy your food!
+				</p>
+				<div
+					class="modalOrderSum p-4 bg-projectRose50 my-4 rounded-xl space-y-10">
+					<div class="modalSumedItem flex justify-between items-center"></div>
+
+					<div class="orderTotal flex items-center justify-between">
+						<p class="">Order Total</p>
+						<p class="modalFinalSum text-3xl font-bold">$11.00</p>
+					</div>
+				</div>
+				<button
+					class="restartBtn font-semibold bg-projectRed text-white rounded-3xl w-full py-3 my-2">
+					Start New Order
+				</button>
+			</div>
+		</div>
+
+		<div class="p-8">
+			<h1 class="headline text-5xl font-bold text-projectRose900">Desserts</h1>
+			<div class="flex flex-col xl:flex-row">
+				<ul
+					class="productList flex flex-col items-center justify-center py-12 sm:grid md:grid-cols-2 lg:grid-cols-3 lg:gap-12 xl: gap-0">
+					<li class="listItem flex flex-col items-center justify-center">
+						<div class="rounded-xl relative flex items-center justify-center">
+							<img
+								src="./images/image-waffle-mobile.jpg"
+								alt="Waffle with Berries"
+								class="rounded-xl" />
+
+							<button
+								class="absolute normalStateBtn w-[180px] justify-center bg-white -bottom-6 flex items-center px-6 py-3 rounded-3xl border border-projectRose400 transition-colors hover:border-projectRed hover:text-projectRed">
+								<img src="./images/icon-add-to-cart.svg" alt="" class="pr-2" />
+								Add to Cart
+							</button>
+						</div>
+						<div
+							class="productData flex flex-col py-6 items-start space-y-1 w-full">
+							<p class="category text-projectRose500 font-light">Waffle</p>
+							<p class="name text-projectRose900 font-semibold">
+								Waffle with Berries
+							</p>
+							<p class="price text-projectRed font-semibold">$6.50</p>
+						</div>
+					</li>
+					<li class="listItem flex flex-col items-center justify-center">
+						<div class="rounded-xl relative flex items-center justify-center">
+							<img
+								src="./images/image-creme-brulee-mobile.jpg"
+								alt="creme brulee"
+								class="rounded-xl" />
+							<button
+								class="absolute normalStateBtn w-[180px] justify-center bg-white -bottom-6 flex items-center px-6 py-3 rounded-3xl border border-projectRose400 transition-colors hover:border-projectRed hover:text-projectRed">
+								<img src="./images/icon-add-to-cart.svg" alt="" class="pr-2" />
+								Add to Cart
+							</button>
+						</div>
+						<div
+							class="productData flex flex-col py-6 items-start space-y-1 w-full">
+							<p class="category text-projectRose500 font-light">
+								Crème Brûlée
+							</p>
+							<p class="name text-projectRose900 font-semibold">
+								Vanilla Bean Crème Brûlée
+							</p>
+							<p class="price text-projectRed font-semibold">$7.00</p>
+						</div>
+					</li>
+					<li class="listItem flex flex-col items-center justify-center">
+						<div class="rounded-xl relative flex items-center justify-center">
+							<img
+								src="./images/image-macaron-mobile.jpg"
+								alt=""
+								class="rounded-xl" />
+							<button
+								class="absolute normalStateBtn w-[180px] justify-center bg-white -bottom-6 flex items-center px-6 py-3 rounded-3xl border border-projectRose400 transition-colors hover:border-projectRed hover:text-projectRed">
+								<img
+									src="./images/icon-add-to-cart.svg"
+									alt="macaron"
+									class="pr-2" />
+								Add to Cart
+							</button>
+						</div>
+						<div
+							class="productData flex flex-col py-6 items-start space-y-1 w-full">
+							<p class="category text-projectRose500 font-light">Macaron</p>
+							<p class="name text-projectRose900 font-semibold">
+								Macaron Mix of Five
+							</p>
+							<p class="price text-projectRed font-semibold">$8.00</p>
+						</div>
+					</li>
+					<li class="listItem flex flex-col items-center justify-center">
+						<div class="rounded-xl relative flex items-center justify-center">
+							<img
+								src="./images/image-tiramisu-mobile.jpg"
+								alt=""
+								class="rounded-xl" />
+							<button
+								class="absolute normalStateBtn w-[180px] justify-center bg-white -bottom-6 flex items-center px-6 py-3 rounded-3xl border border-projectRose400 transition-colors hover:border-projectRed hover:text-projectRed">
+								<img
+									src="./images/icon-add-to-cart.svg"
+									alt="tiramisu"
+									class="pr-2" />
+								Add to Cart
+							</button>
+						</div>
+						<div
+							class="productData flex flex-col py-6 items-start space-y-1 w-full">
+							<p class="category text-projectRose500 font-light">Tiramisu</p>
+							<p class="name text-projectRose900 font-semibold">
+								Classic Tiramisu
+							</p>
+							<p class="price text-projectRed font-semibold">$5.50</p>
+						</div>
+					</li>
+					<li class="listItem flex flex-col items-center justify-center">
+						<div class="rounded-xl relative flex items-center justify-center">
+							<img
+								src="./images/image-baklava-mobile.jpg"
+								alt=""
+								class="rounded-xl" />
+							<button
+								class="absolute normalStateBtn w-[180px] justify-center bg-white -bottom-6 flex items-center px-6 py-3 rounded-3xl border border-projectRose400 transition-colors hover:border-projectRed hover:text-projectRed">
+								<img
+									src="./images/icon-add-to-cart.svg"
+									alt="Baklava"
+									class="pr-2" />
+								Add to Cart
+							</button>
+						</div>
+						<div
+							class="productData flex flex-col py-6 items-start space-y-1 w-full">
+							<p class="category text-projectRose500 font-light">Baklava</p>
+							<p class="name text-projectRose900 font-semibold">
+								Pistachio Baklava
+							</p>
+							<p class="price text-projectRed font-semibold">$4.00</p>
+						</div>
+					</li>
+					<li class="listItem flex flex-col items-center justify-center">
+						<div class="rounded-xl relative flex items-center justify-center">
+							<img
+								src="./images/image-meringue-mobile.jpg"
+								alt=""
+								class="rounded-xl" />
+							<button
+								class="absolute normalStateBtn w-[180px] justify-center bg-white -bottom-6 flex items-center px-6 py-3 rounded-3xl border border-projectRose400 transition-colors hover:border-projectRed hover:text-projectRed">
+								<img
+									src="./images/icon-add-to-cart.svg"
+									alt="Lemon Meringue Pie"
+									class="pr-2" />
+								Add to Cart
+							</button>
+						</div>
+						<div
+							class="productData flex flex-col py-6 items-start space-y-1 w-full">
+							<p class="category text-projectRose500 font-light">Pie</p>
+							<p class="name text-projectRose900 font-semibold">
+								Lemon Meringue Pie
+							</p>
+							<p class="price text-projectRed font-semibold">$5.00</p>
+						</div>
+					</li>
+					<li class="listItem flex flex-col items-center justify-center">
+						<div class="rounded-xl relative flex items-center justify-center">
+							<img
+								src="./images/image-cake-mobile.jpg"
+								alt=""
+								class="rounded-xl" />
+							<button
+								class="absolute normalStateBtn w-[180px] justify-center bg-white -bottom-6 flex items-center px-6 py-3 rounded-3xl border border-projectRose400 transition-colors hover:border-projectRed hover:text-projectRed">
+								<img
+									src="./images/icon-add-to-cart.svg"
+									alt="Red Velvet Cake"
+									class="pr-2" />
+								Add to Cart
+							</button>
+						</div>
+						<div
+							class="productData flex flex-col py-6 items-start space-y-1 w-full">
+							<p class="category text-projectRose500 font-light">Cake</p>
+							<p class="name text-projectRose900 font-semibold">
+								Red Velvet Cake
+							</p>
+							<p class="price text-projectRed font-semibold">$4.50</p>
+						</div>
+					</li>
+					<li class="listItem flex flex-col items-center justify-center">
+						<div class="rounded-xl relative flex items-center justify-center">
+							<img
+								src="./images/image-brownie-mobile.jpg"
+								alt=""
+								class="rounded-xl" />
+							<button
+								class="absolute normalStateBtn w-[180px] justify-center bg-white -bottom-6 flex items-center px-6 py-3 rounded-3xl border border-projectRose400 transition-colors hover:border-projectRed hover:text-projectRed">
+								<img
+									src="./images/icon-add-to-cart.svg"
+									alt="Salted Caramel Brownie"
+									class="pr-2" />
+								Add to Cart
+							</button>
+						</div>
+						<div
+							class="productData flex flex-col py-6 items-start space-y-1 w-full">
+							<p class="category text-projectRose500 font-light">Brownie</p>
+							<p class="name text-projectRose900 font-semibold">
+								Salted Caramel Brownie
+							</p>
+							<p class="price text-projectRed font-semibold">$5.50</p>
+						</div>
+					</li>
+					<li class="listItem flex flex-col items-center justify-center">
+						<div class="rounded-xl relative flex items-center justify-center">
+							<img
+								src="./images/image-panna-cotta-mobile.jpg"
+								alt=""
+								class="rounded-xl" />
+							<button
+								class="absolute normalStateBtn w-[180px] justify-center bg-white -bottom-6 flex items-center px-6 py-3 rounded-3xl border border-projectRose400 transition-colors hover:border-projectRed hover:text-projectRed">
+								<img
+									src="./images/icon-add-to-cart.svg"
+									alt="Vanilla Panna Cotta"
+									class="pr-2" />
+								Add to Cart
+							</button>
+						</div>
+						<div
+							class="productData flex flex-col py-6 items-start space-y-1 w-full">
+							<p class="category text-projectRose500 font-light">Panna Cotta</p>
+							<p class="name text-projectRose900 font-semibold">
+								Vanilla Panna Cotta
+							</p>
+							<p class="price text-projectRed font-semibold">$6.50</p>
+						</div>
+					</li>
+				</ul>
+
+				<div
+					class="cart flex flex-col xl:flex-none bg-white p-6 rounded-xl xl:ml-10 xl:w-1/4 relative">
+					<p class="cartHeadline text-projectRed font-bold text-3xl">
+						Your Cart <span class="orderSumAmount">(0)</span>
+					</p>
+					<div class="orderSubmitBox space-y-4 hidden">
+						<div class="totalPrice py-6 flex items-center justify-between">
+							<p class="">Order Total</p>
+							<p class="sumTotal text-2xl font-bold"></p>
+						</div>
+						<div class="flex text-sm p-4 rounded-xl bg-projectRose50">
+							<img src="./images/icon-carbon-neutral.svg" alt="" />
+							<p class="">This is a <b>carbon neutral</b> delivery</p>
+						</div>
+						<button
+							class="confirmBtn flex justify-center items-center px-6 py-3 inset-x-0 font-semibold text-white bg-projectRed rounded-3xl w-full my-6">
+							Confirm Order
+						</button>
+					</div>
+					<div
+						class="emptyState flex flex-col items-center justify-center py-4">
+						<img src="./images/illustration-empty-cart.svg" alt="" />
+						<p class="text-projectRose500 font-semibold tracking-wide py-2">
+							Your added item will appear here
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="main.js"></script>
+</html>
